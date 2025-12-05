@@ -6,6 +6,7 @@ package com.ayush.smartbank;
 import com.ayush.smartbank.bank.Bank;
 import com.ayush.smartbank.bank.Account;
 import com.ayush.smartbank.bank.Transaction;
+import com.ayush.smartbank.bank.SavingsAccount;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,22 +27,31 @@ public class Main {
 
 
 
-        //create an account
-        Account a = new Account("ACC101", "Neha", 5000);
+        // //create an account
+        // Account a = new Account("ACC101", "Neha", 5000);
 
-        //perform actions
-        a.deposit(2000);
-        a.withdraw(1500);
-        a.deposit(300);
+        // //perform actions
+        // a.deposit(2000);
+        // a.withdraw(1500);
+        // a.deposit(300);
 
-        //check balance
-        System.out.println("Final Balance: " + a.getBalance());
+        // //check balance
+        // System.out.println("Final Balance: " + a.getBalance());
 
-        //print all transactions
-        System.out.println("\nTransaction History: ");
-        for (Transaction t : a.getTransactions()) {
-            System.out.println(t);
+        // //print all transactions
+        // System.out.println("\nTransaction History: ");
+        // for (Transaction t : a.getTransactions()) {
+        //     System.out.println(t);
+
+        SavingsAccount s = new SavingsAccount("2001", "Riya", 5.0);
+
+        s.deposit(1000);
+        s.applyInterest();
+        System.out.println(s.getBalance());
+
+
+
+
         }
     }
-}
 

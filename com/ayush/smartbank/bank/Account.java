@@ -14,10 +14,9 @@ public class Account {
     // New: a timeline of all events that ever happened
     private List<Transaction> transactions;
 
-    public Account(String accountNumber, String holderName, double initialBalance) {
+    public Account(String accountNumber, String holderName, double balance) {
         this.holderName = holderName;
         this.balance = balance;
-        this.balance = initialBalance;
         this.transactions = new ArrayList<>();
     }
 
@@ -70,3 +69,5 @@ public class Account {
     }
 
 }
+
+// will use overriding model
